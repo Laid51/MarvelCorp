@@ -1,2 +1,2 @@
-# 51Marvel
+# MarvelCorp
 Projet WebDev 51Marvel
