@@ -1,0 +1,10 @@
+<div class="bg-color-1">
+    <div class="row">
+        <ng-container *ngFor="let current of cocktails">
+            <div class="col-6">
+                <app-characters [characters]="current"></app-characters>
+            </div>
+        </ng-container>
+    </div>
+</div>
+

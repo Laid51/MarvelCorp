@@ -1,0 +1,19 @@
+<div><h2>Les premiers personnages.</h2></div>
+<content>
+    <div class="bg-color-3 d-flex justify-content-center">Vous avez sélectionné le cocktail : {{ lastCharacter }}</div>
+    <div class="padding-25 bg-color-1">
+        <div class="row" id="bigd">
+            <div class="col-12 d-flex justify-content-center f-large padding-b-25">
+                <span class="titre">Les classiques</span>
+            </div>
+            <div class="row" id="smalld">
+                <ng-container *ngIf="myCharacters.length > 0">
+                    <div class="col-3" *ngFor="let item of myCharacters">
+                        <app-characters [characters]="item" (eventOut)="onEvent($event)"></app-characters>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+</content>

@@ -1,0 +1,78 @@
+/*.general {
+    height: 8%;
+    border: 1px solid;
+}*/
+/* Reset des styles de base et ajout de styles généraux */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Style de l'en-tête */
+  header {
+    background-color: #ed1d24;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .panel {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Styles des éléments du menu */
+  .col-2 img {
+    max-width: 100%;
+  }
+  
+  .col-8 a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .col-8 a:hover {
+    background-color: #000;
+  }
+  
+  /* Ajout de styles spécifiques pour les liens "A propos" */
+  .col-2 a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .col-2 a:hover {
+    background-color: #fff;
+    color: #ed1d24;
+  }
+  
+  /* Ajout de styles spécifiques pour les médias de petite taille */
+  @media screen and (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-2, .col-8, .col-2 {
+      width: 100%;
+    }
+  
+    .col-2 img {
+      margin-bottom: 10px;
+    }
+  }
