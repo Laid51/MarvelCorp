@@ -1,0 +1,20 @@
+footer {
+    background-color: #000; /* Fond noir pour le style Marvel */
+    color: #fff; /* Texte en blanc */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .marvel-footer {
+    font-family: 'Arial', sans-serif; /* Utilisez la police appropriée pour le style Marvel */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .marvel-footer p {
+    margin: 5px 0;
+  }
+  

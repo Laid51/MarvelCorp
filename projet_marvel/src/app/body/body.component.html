@@ -1,6 +1,17 @@
-<div><h2>Les premiers personnages.</h2></div>
+<app-intro></app-intro>
+<div>
+    <h2>Les premiers personnages.</h2>
+</div>
 <content>
-    <div class="bg-color-3 d-flex justify-content-center">Vous avez sélectionné le cocktail : {{ lastCharacter }}</div>
+    <div class="bg-color-3 d-flex justify-content-center">
+        <div><app-letter-bar></app-letter-bar></div>
+        <div>
+            <form [formGroup]="searchForm">
+                Chercher des cocktails dont le nom contient : <input formControlName="search">
+            </form>
+        </div>
+        <div>Vous avez sélectionné le cocktail : {{ lastCharacter }}</div>
+    </div>
     <div class="padding-25 bg-color-1">
         <div class="row" id="bigd">
             <div class="col-12 d-flex justify-content-center f-large padding-b-25">

@@ -1,19 +1,18 @@
-//import { HomeComponent } from './home/home.component';
+import { BodyComponent } from './body/body.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-//import { WithOrWithoutComponent } from './with-or-without/with-or-without.component';
-//import { FinancesComponent } from './finances/finances.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
-//import { AboutComponent } from './about/about.component';
+import { SeriesComponent } from './series/series.component';
+import { ComicsComponent } from './comics/comics.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/home' },
-    //{ path: 'home', component: HomeComponent },
+    { path: 'home', component: BodyComponent },
     { path: 'characters/:letter', component: CharacterDetailComponent },
-    //{ path: 'with', component: WithOrWithoutComponent },
-    //{ path: 'without', component: WithOrWithoutComponent },
-    //{ path: 'finances', component: FinancesComponent },
-    //{ path: 'about', component: AboutComponent }
+    { path: 'series', component: SeriesComponent },
+    { path: 'comics', component: ComicsComponent },
+    { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({

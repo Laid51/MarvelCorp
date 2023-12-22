@@ -12,6 +12,9 @@ import { IntroComponent } from './intro/intro.component';
 import { CharactersComponent } from './characters/characters.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { LetterBarComponent } from './letter-bar/letter-bar.component';
+import { SeriesComponent } from './series/series.component';
+import { ComicsComponent } from './comics/comics.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import { LetterBarComponent } from './letter-bar/letter-bar.component';
     CharactersComponent,
     CharacterDetailComponent,
     LetterBarComponent,
+    SeriesComponent,
+    ComicsComponent,
+    AboutComponent,
     
   ],
   imports: [
