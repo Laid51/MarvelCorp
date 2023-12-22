@@ -1,0 +1,10 @@
+<div class="bg-color-1 d-flex justify-content-center f-large padding-25">
+    <div class="row ">
+        <ng-container *ngIf="characters.length > 0">
+            <div class="col-3" *ngFor="let item of characters">
+                <app-characters [character]="item"></app-characters>
+            </div>
+        </ng-container>
+    </div>
+</div>
+

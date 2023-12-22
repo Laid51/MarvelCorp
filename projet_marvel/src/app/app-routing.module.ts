@@ -5,14 +5,16 @@ import { CharacterDetailComponent } from './character-detail/character-detail.co
 import { SeriesComponent } from './series/series.component';
 import { ComicsComponent } from './comics/comics.component';
 import { AboutComponent } from './about/about.component';
+import { CharactersByLetterComponent } from './characters-by-letter/characters-by-letter.component';
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/home' },
     { path: 'home', component: BodyComponent },
-    { path: 'characters/:letter', component: CharacterDetailComponent },
+    { path: 'characters/:letter', component: CharactersByLetterComponent },
     { path: 'series', component: SeriesComponent },
     { path: 'comics', component: ComicsComponent },
     { path: 'about', component: AboutComponent },
+    { path: 'characters/:id/detail', component: CharacterDetailComponent },
 ];
 
 @NgModule({

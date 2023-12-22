@@ -15,6 +15,8 @@ import { LetterBarComponent } from './letter-bar/letter-bar.component';
 import { SeriesComponent } from './series/series.component';
 import { ComicsComponent } from './comics/comics.component';
 import { AboutComponent } from './about/about.component';
+import { CharactersByLetterComponent } from './characters-by-letter/characters-by-letter.component';
+import { CharactersListComponent } from './characters-list/characters-list.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { AboutComponent } from './about/about.component';
     SeriesComponent,
     ComicsComponent,
     AboutComponent,
+    CharactersByLetterComponent,
+    CharactersListComponent,
     
   ],
   imports: [

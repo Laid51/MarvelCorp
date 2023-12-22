@@ -20,7 +20,7 @@
             <div class="row" id="smalld">
                 <ng-container *ngIf="myCharacters.length > 0">
                     <div class="col-3" *ngFor="let item of myCharacters">
-                        <app-characters [characters]="item" (eventOut)="onEvent($event)"></app-characters>
+                        <app-characters [character]="item" (eventOut)="onEvent($event)"></app-characters>
                     </div>
                 </ng-container>
             </div>

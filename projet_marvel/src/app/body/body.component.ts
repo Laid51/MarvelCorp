@@ -12,9 +12,9 @@ import { Character } from 'src/character.interface';
 })
 export class BodyComponent implements OnInit {
 
-  myClasses: any = {}
-  myCharacters!: Array<any>
-  lastCharacter: String = '(aucun)'
+  //myClasses: any = {}
+  myCharacters: Character[]=[]
+  lastCharacter: String = ''
   searchForm: UntypedFormGroup
   searchCtrl: FormControl<string>
 
