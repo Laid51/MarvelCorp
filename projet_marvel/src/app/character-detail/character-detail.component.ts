@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../data.service';
-import { switchMap } from 'rxjs';
+import { map, switchMap } from 'rxjs';
 
 @Component({
     selector: 'app-character-detail',
@@ -19,12 +19,10 @@ export class CharacterDetailComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.paramMap.pipe(
-            switchMap( (params) => this.dataService.getCharacterById(params.get('id') ?? ''))
+            map( params => params.get('id') ?? '' ),
+            switchMap( (id:string) => this.dataService.getCharacterById(id))
         ).subscribe(
-            (character) => {
-                this.character = character
-                //this.alcoholic = cocktail.alcoholic ? 'assets/invalid.png' : 'assets/valid.png'
-            }
+            character => this.character = character
         )
     }
 
