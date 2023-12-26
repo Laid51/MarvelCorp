@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, combineLatest, filter, forkJoin, map, of, concatMap} from 'rxjs';
+import { Observable, filter, forkJoin, map, BehaviorSubject} from 'rxjs';
 import { Character } from 'src/character.interface';
 import { Comics } from 'src/comics.interface';
 import { Series } from 'src/series.interface';
@@ -25,19 +25,7 @@ export class DataService {
     constructor(private http: HttpClient) { }
 
 
-    /*getCharacters(): Observable<Character[]> {
-            return  this.http.get<any>(this.BASE_URL + "?" + this.LIMIT2 + this.OFFSET + this.API_KEY).
-                pipe(
-                    map(response => response.data.results),
-                    map(results => this.extractCharacterInfo(results))
-
-                );
-    }*/
-
-    ////////////////////////
-
-
-    getComics(offset: number): Observable<Comics[]> {
+    getComics(): Observable<Comics[]> {
       const requestUrl = `${this.BASE_URL_COMICS}?${this.API_KEY}`;
   
       return this.http.get<any>(requestUrl).pipe(
@@ -46,7 +34,7 @@ export class DataService {
       );
     }
 
-    getSeries(offset: number): Observable<Series[]> {
+    getSeries(): Observable<Series[]> {
       const requestUrl = `${this.BASE_URL_SERIES}?${this.API_KEY}`;
   
       return this.http.get<any>(requestUrl).pipe(
@@ -106,55 +94,26 @@ export class DataService {
     )
 }
 
-    /*getCharacterFirstLetter(letter: string): Observable<any[]> {
-        return this.http.get<any>(this.BASE_URL + "?" + this.LIMIT2 + this.OFFSET + this.API_KEY).pipe(
-            map(response => response.data.results),
-            map(results => this.extractCharacterInfo(results)),
-            map(match => match.filter(el => el.name.toLocaleLowerCase()[0] === letter.toLocaleLowerCase())),
-        );
-    }
-
-    getCharactersContains(search: string,offset: number): Observable<Character[]> {
-        return this.getCharacters(offset).pipe(
-            map((characters: Character[]) => characters.filter((el: Character) => el.name.toLocaleLowerCase().indexOf(search.toLocaleLowerCase()) >= 0))
+      getComicsContains(search: string): Observable<Comics[]> {
+        return this.getComics().pipe(
+            map((comics: Comics[]) => comics.filter((el: Comics) => el.title.toLocaleLowerCase().indexOf(search.toLocaleLowerCase()) >= 0))
         )
     }
 
-    getCharactersFirstLetter(letter: string,offset: number): Observable<Character[]> {
-        return this.getCharacters(offset).pipe(
-            map((characters: Character[]) => characters.filter((el: Character) => el.name.toLocaleLowerCase()[0] === letter.toLocaleLowerCase()))
+
+      getSeriesContains(search: string): Observable<Series[]> {
+        return this.getSeries().pipe(
+            map((series: Series[]) => series.filter((el: Series) => el.title.toLocaleLowerCase().indexOf(search.toLocaleLowerCase()) >= 0))
         )
     }
 
-    getCharactersBeginWith(begin: string,offset: number): Observable<Character[]> {
-        return this.getCharacters(offset).pipe(
-            map((characters: Character[]) => characters.filter((el: Character) => el.name.toLocaleLowerCase().indexOf(begin.toLocaleLowerCase()) === 0))
-        )
-    }*/
-    
-    
-    /*getCharactersContains(search: string, offset: number): Observable<Character[]> {
+
+      getCharactersContains(search: string, offset:number): Observable<Character[]> {
         return this.getCharacters(offset).pipe(
           map((characters: Character[]) =>
-            characters.filter((el: Character) => el.name.toLocaleLowerCase().indexOf(search.toLocaleLowerCase()) >= 0)
+            characters.filter((el: Character) => el.name.toLowerCase().includes(search.toLowerCase()))
           )
-        );
-      }*/
-
-      getComicsContains(search: string, myComics: Comics[]): Observable<Comics[]> {
-        const filteredCharacters = myComics.filter((el: Comics) => el.title.toLowerCase().includes(search.toLowerCase()));
-        return of(filteredCharacters);
-      }
-
-      getSeriesContains(search: string, mySeries: Series[]): Observable<Series[]> {
-        const filteredCharacters = mySeries.filter((el: Series) => el.title.toLowerCase().includes(search.toLowerCase()));
-        return of(filteredCharacters);
-      }
-
-
-      getCharactersContains(search: string, myCharacters: Character[]): Observable<Character[]> {
-        const filteredCharacters = myCharacters.filter((el: Character) => el.name.toLowerCase().includes(search.toLowerCase()));
-        return of(filteredCharacters);
+        )
       }
 
 
@@ -167,14 +126,7 @@ export class DataService {
         );
       }
     
-      getCharactersBeginWith(begin: string, offset: number): Observable<Character[]> {
-        return this.getCharacters(offset).pipe(
-          map((characters: Character[]) =>
-            characters.filter((el: Character) => el.name.toLocaleLowerCase().indexOf(begin.toLocaleLowerCase()) === 0)
-          )
-        );
-      }
-
+     
     protected extractCharacterInfo(results: any[]): Character[] {
         return results.map((character: any): Character =>
         ({
@@ -203,6 +155,25 @@ export class DataService {
         description: comics.description,
         img: `${comics.thumbnail.path}.${comics.thumbnail.extension}`,
     }));
+}
+
+private searchResultsSubject = new BehaviorSubject<Character[]>([]);
+  searchResults$ = this.searchResultsSubject.asObservable();
+
+handleSearch(value: string): void {
+  const requests: Observable<Character[]>[] = [];
+
+  for (let i = 0; i < 16; i++) {
+    const offset = 100 * i;
+    requests.push(this.getCharactersContains(value, offset));
+  }
+
+  
+
+  forkJoin(requests).subscribe(results => {
+    const combinedResults = results.flat(); 
+    this.searchResultsSubject.next(combinedResults);
+  });
 }
 }
 

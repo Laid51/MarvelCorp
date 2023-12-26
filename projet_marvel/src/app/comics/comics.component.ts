@@ -28,19 +28,18 @@ export class ComicsComponent {
 
   ngOnInit(): void {
     this.myComics = [];
-    for (let i = 0; i < 1; i++) {
-      this.loadCharacters(100*i);
-    }
+      this.loadCharacters();
+      
       this.searchCtrl.valueChanges
-      .pipe(switchMap((val: string) => this.dataService.getComicsContains(val,this.myComics)))
+      .pipe(switchMap((val: string) => this.dataService.getComicsContains(val)))
       .subscribe((series: Series[]) => (this.myComics = series));
 
  
     
   }
 
-  loadCharacters(offset: number): void {
-    this.dataService.getComics(offset).subscribe((data) => {
+  loadCharacters(): void {
+    this.dataService.getComics().subscribe((data) => {
       this.myComics.push(...data);
     });
   }

@@ -28,19 +28,17 @@ export class SeriesComponent {
 
   ngOnInit(): void {
     this.mySeries = [];
-    for (let i = 0; i < 1; i++) {
-      this.loadCharacters(100*i);
-    }
+      this.loadCharacters();
       this.searchCtrl.valueChanges
-      .pipe(switchMap((val: string) => this.dataService.getSeriesContains(val,this.mySeries)))
+      .pipe(switchMap((val: string) => this.dataService.getSeriesContains(val)))
       .subscribe((series: Series[]) => (this.mySeries = series));
 
  
     
   }
 
-  loadCharacters(offset: number): void {
-    this.dataService.getSeries(offset).subscribe((data) => {
+  loadCharacters(): void {
+    this.dataService.getSeries().subscribe((data) => {
       this.mySeries.push(...data);
     });
   }

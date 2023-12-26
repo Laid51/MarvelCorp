@@ -1,10 +1,10 @@
 <div class="bg-color-3 d-flex justify-content-center">
     <div>
         <form [formGroup]="searchForm">
-            Chercher des séries dont le nom contient : <input formControlName="search">
+            Chercher des comics dont le nom contient : <input formControlName="search">
         </form>
     </div>
-    <div>Vous avez sélectionné la série : {{ lastComics }}</div>
+    <div>Vous avez sélectionné la comics : {{ lastComics }}</div>
 </div>
 <div class="padding-25 bg-color-1">
     <div class="row" id="bigd">
@@ -14,7 +14,7 @@
         <div class="row" id="smalld">
             <ng-container *ngIf="myComics.length > 0">
                 <div class="col-3" *ngFor="let item of myComics">
-                    <app-series-list [series]="item" (eventOut)="onEvent($event)"></app-series-list>
+                    <app-comics-list [comics]="item" (eventOut)="onEvent($event)"></app-comics-list>
                 </div>
             </ng-container>
         </div>

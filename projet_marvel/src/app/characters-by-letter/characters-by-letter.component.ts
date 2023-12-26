@@ -18,12 +18,14 @@ export class CharactersByLetterComponent {
     { }
 
     ngOnInit(): void {
+      for (let i=0; i<16; i++){
         this.activatedRoute.paramMap.pipe(
             map( params => params.get('letter') ?? '' ),
-            switchMap( (letter: string) => this.dataService.getCharactersFirstLetter(letter, this.characters.length) )
+            switchMap( (letter: string) => this.dataService.getCharactersFirstLetter(letter, i*100) )
         ).subscribe(
-          characters => this.characters = characters
+          characters => this.characters.push(...characters)
         )
+      }
     }
 
 
