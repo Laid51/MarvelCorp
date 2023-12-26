@@ -7,15 +7,15 @@
         <div><app-letter-bar></app-letter-bar></div>
         <div>
             <form [formGroup]="searchForm">
-                Chercher des cocktails dont le nom contient : <input formControlName="search">
+                Chercher des personnages dont le nom contient : <input formControlName="search">
             </form>
         </div>
-        <div>Vous avez sélectionné le cocktail : {{ lastCharacter }}</div>
+        <div>Vous avez sélectionné le personnage : {{ lastCharacter }}</div>
     </div>
     <div class="padding-25 bg-color-1">
         <div class="row" id="bigd">
             <div class="col-12 d-flex justify-content-center f-large padding-b-25">
-                <span class="titre">Les classiques</span>
+                <span class="titre">Les personnages Marvel</span>
             </div>
             <div class="row" id="smalld">
                 <ng-container *ngIf="myCharacters.length > 0">
@@ -26,5 +26,4 @@
             </div>
         </div>
     </div>
-
 </content>

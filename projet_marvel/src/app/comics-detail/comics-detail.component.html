@@ -1,0 +1,21 @@
+<div class="bg-color-1 padding-40">
+    <div class="row">
+      <ng-container *ngIf="comics != null">
+        <div class="col-2"></div>
+        <div class="col-10 d-flex justify-content-start">
+          {{ comics.title }}&nbsp;
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-3 d-flex justify-content-start">
+          <img [src]="comics.img" height="400px" />
+        </div>
+        <div class="col-5">
+          {{ comics.description }}
+        </div>
+        <div class="col-2">
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

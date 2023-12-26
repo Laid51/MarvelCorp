@@ -20,7 +20,7 @@ export class CharactersByLetterComponent {
     ngOnInit(): void {
         this.activatedRoute.paramMap.pipe(
             map( params => params.get('letter') ?? '' ),
-            switchMap( (letter: string) => this.dataService.getCharacterFirstLetter(letter) )
+            switchMap( (letter: string) => this.dataService.getCharactersFirstLetter(letter, this.characters.length) )
         ).subscribe(
           characters => this.characters = characters
         )

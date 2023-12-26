@@ -1,0 +1,21 @@
+<div class="bg-color-1 padding-40">
+    <div class="row">
+      <ng-container *ngIf="series != null">
+        <div class="col-2"></div>
+        <div class="col-10 d-flex justify-content-start">
+          {{ series.title }}&nbsp;
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-3 d-flex justify-content-start">
+          <img [src]="series.img" height="400px" />
+        </div>
+        <div class="col-5">
+          {{ series.description }}
+        </div>
+        <div class="col-2">
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

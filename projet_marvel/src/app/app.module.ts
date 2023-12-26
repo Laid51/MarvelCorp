@@ -17,6 +17,10 @@ import { ComicsComponent } from './comics/comics.component';
 import { AboutComponent } from './about/about.component';
 import { CharactersByLetterComponent } from './characters-by-letter/characters-by-letter.component';
 import { CharactersListComponent } from './characters-list/characters-list.component';
+import { SeriesListComponent } from './series-list/series-list.component';
+import { SeriesDetailComponent } from './series-detail/series-detail.component';
+import { ComicsDetailComponent } from './comics-detail/comics-detail.component';
+import { ComicsListComponent } from './comics-list/comics-list.component';
 
 
 @NgModule({
@@ -34,6 +38,10 @@ import { CharactersListComponent } from './characters-list/characters-list.compo
     AboutComponent,
     CharactersByLetterComponent,
     CharactersListComponent,
+    SeriesListComponent,
+    SeriesDetailComponent,
+    ComicsDetailComponent,
+    ComicsListComponent,
     
   ],
   imports: [
