@@ -1,2 +1,0 @@
-# MarvelCorp
-Projet WebDev MarvelCorp
