@@ -1,21 +1,19 @@
 <div class="bg-color-1 padding-40">
-    <div class="row">
-      <ng-container *ngIf="character != null">
-        <div class="col-2"></div>
-        <div class="col-10 d-flex justify-content-start">
-          {{ character.name }}&nbsp;
+  <div class="row">
+    <ng-container *ngIf="character != null">
+      <div class="col-12 text-center">
+        <div class="red-box">
+          <div class="d-flex justify-content-center">
+            <h2>{{ character.name }}</h2>
+          </div>
+          <div class="d-flex justify-content-center">
+            <img [src]="character.img" height="400px" class="hover-shadow" />
+          </div>
+          <div class="d-flex justify-content-center">
+            <p>{{ character.description }}</p>
+          </div>
         </div>
-        <div class="col-2">
-        </div>
-        <div class="col-3 d-flex justify-content-start">
-          <img [src]="character.img" height="400px" />
-        </div>
-        <div class="col-5">
-          {{ character.description }}
-        </div>
-        <div class="col-2">
-        </div>
-      </ng-container>
-    </div>
+      </div>
+    </ng-container>
   </div>
-  
+</div>

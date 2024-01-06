@@ -1,19 +1,18 @@
 <div class="bg-color-1 padding-40">
     <div class="row">
       <ng-container *ngIf="comics != null">
-        <div class="col-2"></div>
-        <div class="col-10 d-flex justify-content-start">
-          {{ comics.title }}&nbsp;
-        </div>
-        <div class="col-2">
-        </div>
-        <div class="col-3 d-flex justify-content-start">
-          <img [src]="comics.img" height="400px" />
-        </div>
-        <div class="col-5">
-          {{ comics.description }}
-        </div>
-        <div class="col-2">
+        <div class="col-12 text-center">
+          <div class="red-box">
+            <div class="d-flex justify-content-center">
+              <h2>{{ comics.title }}</h2>
+            </div>
+            <div class="d-flex justify-content-center">
+              <img [src]="comics.img" height="400px" class="hover-shadow" />
+            </div>
+            <div class="d-flex justify-content-center">
+              <p>{{ comics.description }}</p>
+            </div>
+          </div>
         </div>
       </ng-container>
     </div>

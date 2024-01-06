@@ -1,0 +1,56 @@
+/* Style pour la section de recherche et de sélection de séries */
+.bg-color-3 {
+    background-color: #f5f5f5; /* Fond gris clair */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Style pour le formulaire de recherche */
+  form {
+    margin-bottom: 10px; /* Espacement inférieur */
+  }
+  
+  /* Style pour le texte "Vous avez sélectionné la série" */
+  div {
+    font-weight: bold; /* Texte en gras */
+  }
+  
+  /* Style pour la section "Les Séries Marvel" */
+  .padding-25 {
+    background-color: #ffffff; /* Fond blanc */
+    padding: 25px; /* Espacement interne */
+  }
+  
+ /* Style pour le titre "Les Séries Marvel" */
+ .f-large {
+  font-size: 1.5rem; /* Taille de police augmentée */
+  font-weight: bold; /* Texte en gras */
+  color: #ed1d24; /* Rouge Marvel */
+  text-align: center; /* Centrer horizontalement */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Police de caractères style Marvel */
+}
+
+  /* Style pour la grille de séries */
+  #bigd, #smalld {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .col-3 {
+    width: 25%; /* 3 éléments par ligne, ajuste selon tes besoins */
+    background-color: #ed1d24; /* Fond pour les cases */
+    margin: 10px; /* Espacement entre les cases */
+    padding: 15px; /* Espacement interne des cases */
+    border-radius: 5px; /* Coins arrondis pour les cases */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ombre pour les cases */
+  }
+  /* Style pour les éléments de série au survol */
+  
+  .col-3:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Ombre légère au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+  }
+  
