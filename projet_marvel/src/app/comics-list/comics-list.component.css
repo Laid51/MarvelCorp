@@ -5,36 +5,36 @@
 }
 
 .col-12 {
-  width: 100%; /* Occupe toute la largeur */
-  padding: 10px; /* Espacement interne */
+  width: 100%; 
+  padding: 10px; 
 }
 
 /* Style pour l'image du personnage */
 img.grows {
-  max-width: 100%; /* Image s'adapte à la largeur de la colonne */
-  height: auto; /* Hauteur automatique pour éviter la distorsion */
-  border: 1px solid #ddd; /* Bordure légère */
+  max-width: 100%; 
+  height: auto; 
+  border: 1px solid #ddd; 
 }
 
 /* Style pour les boutons */
 button.btn {
-  padding: 10px 20px; /* Espacement interne */
-  margin-right: 10px; /* Espacement entre les boutons */
-  border-radius: 5px; /* Coins arrondis */
+  padding: 10px 20px; 
+  margin-right: 10px; 
+  border-radius: 5px; 
 }
 
 /* Style pour le bouton */
 button.btn-success {
   background-color:#d89000; 
-  color: #ffffff; /* Texte en blanc */
-  border: none; /* Pas de bordure */
+  color: #ffffff; 
+  border: none; 
 }
 
 /* Style pour le bouton "Light" */
 button.btn-light {
-  background-color: #f8f9fa; /* Couleur de fond claire */
-  color: #333; /* Texte sombre */
-  border: none; /* Pas de bordure */
+  background-color: #f8f9fa;
+  color: #333;
+  border: none; 
 }
 button:hover {
   transform: scale(1.05); /* Légère augmentation de la taille au survol */

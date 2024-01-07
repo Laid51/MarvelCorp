@@ -1,8 +1,8 @@
-.general {
-    height: 8%;
-    border: 1px solid;
-}
-
-.normal {
-    width: 100%;
-}
+/* Style pour les lettres en rouge */
+a {
+    color: red ; /* Couleur rouge pour les lettres */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Police de caractères style Marvel */
+  }
+  
+  

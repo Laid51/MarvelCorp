@@ -101,7 +101,7 @@ header {
   color: #ed1d24; /* Texte rouge au survol */
 }
 
-/* Style pour les liens "A propos" */
+/* Style pour le lien "A propos" */
 .col-2 a {
   text-decoration: none;
   color: #fff;
@@ -109,7 +109,7 @@ header {
   padding: 10px 20px;
   border: 2px solid #fff;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px; /* Coins arrondis */
+  border-radius: 5px; 
 }
 
 /* Style au survol des liens "A propos" */

@@ -1,4 +1,6 @@
-/* Supprimez les styles redondants et modifiez les styles pour l'effet d'ombre et l'augmentation de la taille */
+/* Style pour l'affichage lorsqu'on veut voir les détails d'un personnage*/
+
+
 .red-box {
   background-color: #ed1d24;
   color: #fff;
@@ -13,7 +15,9 @@
   margin-bottom: 10px;
 }
 
-/* Style pour l'image avec effet d'ombre et augmentation de la taille au survol */
+/* Style pour l'augmenation de l'image lorsqu'on survol l'image*/
+
+
 .hover-shadow {
   transition: transform 0.2s, box-shadow 0.2s;
 }

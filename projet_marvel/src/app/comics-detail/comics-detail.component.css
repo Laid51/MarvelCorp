@@ -1,4 +1,5 @@
-/* Supprimez les styles redondants et modifiez les styles pour l'effet d'ombre et l'augmentation de la taille */
+/* Style de l'affichage lorsqu'on veut voir les détails d'un comics*/
+
 .red-box {
   background-color: #ed1d24;
   color: #fff;
@@ -14,6 +15,7 @@
 }
 
 /* Style pour l'image avec effet d'ombre et augmentation de la taille au survol */
+
 .hover-shadow {
   transition: transform 0.2s, box-shadow 0.2s;
 }
