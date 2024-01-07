@@ -3,7 +3,7 @@ content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
+}
   
   /* Style pour l'en-tête */
   h2 {
@@ -12,7 +12,7 @@ content {
     margin-bottom: 20px;
   }
   
-  /* Style pour la section de sélection de cocktail */
+  /* Style pour la section de sélection des personnages marvel */
   .bg-color-3 {
     background-color: #f5f5f5;
     padding: 10px;
@@ -31,9 +31,13 @@ content {
   }
   
   .titre {
-    color: #ed1d24;
-    font-weight: bold;
-  }
+  font-size: 1.5rem; /* Taille de police augmentée */
+  font-weight: bold; /* Texte en gras */
+  color: #ed1d24; /* Rouge Marvel */
+  text-align: center; /* Centrer horizontalement */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Police de caractères style Marvel */
+}
+
   
   /* Style pour les éléments de personnage */
   .row {
@@ -54,12 +58,21 @@ content {
     text-align: center;
   }
 
-  
   .col-3 {
-    width: 25%; /* 3 éléments par ligne, ajuste selon tes besoins */
-  }
-  
+  width: 25%; /* 3 éléments par ligne, ajuste selon tes besoins */
+  background-color: #ed1d24; /* Fond pour les cases */
+  margin: 10px; /* Espacement entre les cases */
+  padding: 15px; /* Espacement interne des cases */
+  border-radius: 5px; /* Coins arrondis pour les cases */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ombre pour les cases */
+}
+
   .padding-b-25 {
     padding-bottom: 25px;
+  }
+
+  .col-3:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Ombre au survol de la case */
+    transform: scale(1.05); /* Augmentation de la taille au survol de la case*/
   }
   

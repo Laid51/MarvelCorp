@@ -1,0 +1,24 @@
+/* Supprimez les styles redondants et modifiez les styles pour l'effet d'ombre et l'augmentation de la taille */
+.red-box {
+  background-color: #ed1d24;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.red-box h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Style pour l'image avec effet d'ombre et augmentation de la taille au survol */
+.hover-shadow {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hover-shadow:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}

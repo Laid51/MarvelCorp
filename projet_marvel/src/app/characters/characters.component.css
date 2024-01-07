@@ -1,11 +1,41 @@
-div {
-    padding: 0
-}
-
-.general {
-    border: 1px solid;
-}
-
-.gras {
-    font-weight: bold;
-}
+/* Style pour la grille et les colonnes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-12 {
+    width: 100%; /* Occupe toute la largeur */
+    padding: 10px; /* Espacement interne */
+  }
+  
+  /* Style pour l'image du personnage */
+  img.grows {
+    max-width: 100%; /* Image s'adapte à la largeur de la colonne */
+    height: auto; /* Hauteur automatique pour éviter la distorsion */
+    border: 1px solid #ddd; /* Bordure légère */
+  }
+  
+  /* Style pour les boutons */
+  button.btn {
+    padding: 10px 20px; /* Espacement interne */
+    margin-right: 10px; /* Espacement entre les boutons */
+    border-radius: 5px; /* Coins arrondis */
+  }
+  
+  /* Style pour le bouton */
+  button.btn-success {
+    background-color: #d89000; 
+    color: #ffffff; /* Texte en blanc */
+    border: none; /* Pas de bordure */
+  }
+  
+  /* Style pour le bouton "Light" */
+  button.btn-light {
+    background-color: #f8f9fa; /* Couleur de fond claire */
+    color: #333; /* Texte sombre */
+    border: none; /* Pas de bordure */
+  }
+  button:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+  }

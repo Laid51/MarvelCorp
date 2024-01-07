@@ -76,3 +76,44 @@ body, h1, h2, h3, p, ul, li {
       margin-bottom: 10px;
     }
   }
+  /* Style pour l'en-tête */
+header {
+  background-color: #ed1d24; /* Fond rouge */
+  color: #fff; /* Texte en blanc */
+  padding: 10px 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Ombre sous l'en-tête */
+}
+
+/* Style pour les éléments du menu (boutons) */
+.col-8 a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'ombre et le fond */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2); /* Ombre sous les boutons */
+}
+
+/* Style au survol des boutons */
+.col-8 a:hover {
+  background-color: #fff; /* Fond blanc au survol */
+  color: #ed1d24; /* Texte rouge au survol */
+}
+
+/* Style pour les liens "A propos" */
+.col-2 a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px; /* Coins arrondis */
+}
+
+/* Style au survol des liens "A propos" */
+.col-2 a:hover {
+  background-color: #fff; /* Fond blanc au survol */
+  color: #ed1d24; /* Texte rouge au survol */
+}

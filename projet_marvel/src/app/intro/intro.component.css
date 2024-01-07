@@ -1,0 +1,49 @@
+/* Style pour le conteneur principal */
+.panel {
+  text-align: center;
+  padding: 40px; /* Augmentation de l'espacement interne */
+}
+
+/* Style pour la grille et les colonnes */
+.row {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  flex-wrap: wrap;
+}
+
+.col-2 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+}
+
+.col-8 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: center;
+}
+
+/* Style pour le texte */
+.f-x-large {
+  font-size: 1.5rem; /* Taille de police augmentée */
+  font-weight: bold; /* Texte en gras */
+  color: #ed1d24; /* Rouge Marvel */
+  text-align: center; /* Centrer horizontalement */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Police de caractères style Marvel */
+}
+
+.f-large {
+  font-size: 1.5rem; /* Taille de police augmentée */
+  font-weight: bold; /* Texte en gras */
+  color: #ed1d24; /* Rouge Marvel */
+  text-align: center; /* Centrer horizontalement */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Police de caractères style Marvel */
+}
+
+
+/* Style pour les images */
+img {
+  max-width: 100%;
+  height: auto;
+}
