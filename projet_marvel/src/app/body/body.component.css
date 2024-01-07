@@ -1,4 +1,5 @@
-/* Style général pour le composant */
+/* Style général de la page */
+
 content {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,7 +21,6 @@ content {
     text-align: center;
   }
   
-  /* Style pour la section "Les classiques" */
   .bg-color-1 {
     background-color: #fff;
     padding: 20px;
@@ -31,10 +31,10 @@ content {
   }
   
   .titre {
-  font-size: 1.5rem; /* Taille de police augmentée */
-  font-weight: bold; /* Texte en gras */
-  color: #ed1d24; /* Rouge Marvel */
-  text-align: center; /* Centrer horizontalement */
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  color: #ed1d24; 
+  text-align: center; 
   font-family: 'Comic Sans MS', cursive, sans-serif; /* Police de caractères style Marvel */
 }
 
@@ -59,11 +59,11 @@ content {
   }
 
   .col-3 {
-  width: 25%; /* 3 éléments par ligne, ajuste selon tes besoins */
+  width: 25%; /* 4 éléments par ligne,  */
   background-color: #ed1d24; /* Fond pour les cases */
   margin: 10px; /* Espacement entre les cases */
-  padding: 15px; /* Espacement interne des cases */
-  border-radius: 5px; /* Coins arrondis pour les cases */
+  padding: 15px; /* Espacement dans les cases */
+  border-radius: 5px; /* Coins arrondis des cases */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Ombre pour les cases */
 }
 
@@ -72,7 +72,7 @@ content {
   }
 
   .col-3:hover {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Ombre au survol de la case */
-    transform: scale(1.05); /* Augmentation de la taille au survol de la case*/
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Ombre au survol de la case du personnage */
+    transform: scale(1.05); /* Augmentation de la taille au survol de la case du personnage */
   }
   
